@@ -8,7 +8,8 @@ from huggingface_hub import login
 
 login(token = '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')
 base_model = "meta-llama/Llama-3.1-8B-Instruct"
-fine_tuned_model = "/home/luudh/luudh/MyFile/AI_Scheduling/Llama-3.1-8B-Instruct-finetuned-version2"
+#fine_tuned_model = "/home/luudh/luudh/MyFile/AI_Scheduling/Llama-3.1-8B-Instruct-finetuned-version2"
+fine_tuned_model = "luudh/AI-Schedule-Manager-Llama-3.1-8B-v2"
 
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline, BitsAndBytesConfig
 from peft import PeftModel

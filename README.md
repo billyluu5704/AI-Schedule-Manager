@@ -56,6 +56,8 @@ It is designed to support intelligent scheduling and staff allocation in researc
    git clone https://github.com/billyluu5704/AI-Schedule-Manager.git
    cd AI-Schedule-Manager
    pip install -r requirements.txt
+   # To run fuzzy_system.py:
+   python -m pipeline.fuzzy_system
    ```
 
 ---
