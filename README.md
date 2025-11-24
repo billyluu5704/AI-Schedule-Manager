@@ -28,10 +28,20 @@ It is designed to support intelligent scheduling and staff allocation in researc
 
 ## 📂 Project Structure
     ```bash
-    cohen_lab/
-    │── fuzzy_system.py # Main entrypoint for suitability scoring
-    │── fuzzy_logic_for_availability_check.py # Fuzzy availability engine
-    │── task_describe_agent.py # LLM-based task parser
+    AI-Scheduling-Manager/
+    │──data
+        │── tech_company_detailed_tasks_timeAdjusted_v2_importanceFixed.csv
+    │──notebooks
+        │── fine_tune_instruction.ipynb
+        │── task_describe_agent_notebook.ipynb
+    │──pipeline
+        │── task_describe_agent.py # LLM-based task parser
+        │── fuzzy_logic_for_availability_check.py # Fuzzy availability engine
+        │── fuzzy_system.py # Main entrypoint for suitability scoring
+    │──plots
+        │── instruction_loss_curve.png
+    │──training
+        │── fine_tune_instruction.py
     │── requirements.txt # Python dependencies
     │── README.md # This file
     ```
