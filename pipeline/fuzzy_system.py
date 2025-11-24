@@ -15,7 +15,7 @@ os.makedirs(r"D:\hf_cache\hub", exist_ok=True)
 #os.environ["HUGGINGFACE_HUB_CACHE"] = r"D:\hf_cache\hub"
 os.environ["HUGGINGFACE_HUB_CACHE"] = "/mnt/d/hf_cache/hub"
 
-base_model = "meta-llama/Llama-3.2-3B-Instruct"
+base_model = "meta-llama/Llama-3.1-8B-Instruct"
 
 user_input = """Design and implement a machine learning pipeline to predict customer churn using historical transaction and interaction data. 
 Use Python with scikit-learn or XGBoost, and ensure the model can be evaluated using ROC-AUC and F1 metrics. 
