@@ -339,12 +339,17 @@ def fuzzy_system(user_input, staff):
     r_medium_net.weight = 0.6  # light influence so it won't dominate
     rules += [r_medium_net]
 
+    # Try both keys, fall back to empty list / string if neither exists
+    required_skills = task.get('Required Skills')
+    if required_skills is None:
+        required_skills = task.get('RequiredSkills', [])
+
     # Create control system and simulation
     suit_ctrl = ctrl.ControlSystem(rules)
     suitability_engine = ctrl.ControlSystemSimulation(suit_ctrl)
 
     suitability_engine.input['availability']   = float(np.clip(availability_score["Availability Score"], 0, 100))
-    suitability_engine.input['skill_match']    = float(np.clip(compute_skill_match(staff['skills'], task['Required Skills']), 0, 100))
+    suitability_engine.input['skill_match']    = float(np.clip(compute_skill_match(staff['skills'], required_skills), 0, 100))
     suitability_engine.input['experience']     = float(np.clip(experience_map[staff['experience']], 0, 4))
     current_workload = len(staff.get('availability', [])) #number of projects
     suitability_engine.input['workload']       = float(np.clip(current_workload, 0, 10))
