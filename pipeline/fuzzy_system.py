@@ -5,9 +5,9 @@ import time
 import json
 from huggingface_hub import login
 login(token = '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')
-from task_describe_agent import generate
+from pipeline.task_describe_agent import generate
 #from availability_check_agent import generate_score
-from fuzzy_logic_for_availability_check import fuzzy_availability
+from pipeline.fuzzy_logic_for_availability_check import fuzzy_availability
 import os
 os.makedirs(r"D:\hf_cache\hub", exist_ok=True)
 

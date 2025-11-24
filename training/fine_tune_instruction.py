@@ -43,7 +43,7 @@ base_model = "meta-llama/Llama-3.1-8B-Instruct"
 #dataset = "~/luudh/MyFile/cohen_lab/tech_company_detailed_tasks.csv"
 #fine_tuned_model = "~/luudh/MyFile/cohen_lab/Llama-3.1-8B-Instruct-finetuned"
 dataset = os.path.expanduser(
-    "~/luudh/MyFile/AI_Scheduling/tech_company_detailed_tasks_timeAdjusted_v2_importanceFixed.csv"
+    "~/luudh/MyFile/AI_Scheduling/data/tech_company_detailed_tasks_timeAdjusted_v2_importanceFixed.csv"
 )
 
 # put checkpoints in a folder you own (relative to your project)
@@ -440,7 +440,7 @@ if any(eval_accuracies):
     #plt.show()
 
 
-plt.savefig("/home/luudh/luudh/MyFile/AI_Scheduling/instruction_loss_curve.png", dpi=300)
+plt.savefig("/home/luudh/luudh/MyFile/AI_Scheduling/plots/instruction_loss_curve.png", dpi=300)
 
 
 
