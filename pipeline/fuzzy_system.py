@@ -4,12 +4,11 @@ from skfuzzy import control as ctrl
 import time
 import json
 from huggingface_hub import login
-login(token = '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')
+login(token = 'your_hugging_face_token')
 from pipeline.task_describe_agent import generate
 #from availability_check_agent import generate_score
 from pipeline.fuzzy_logic_for_availability_check import fuzzy_availability
 import os
-os.makedirs(r"D:\hf_cache\hub", exist_ok=True)
 
 # Best: point directly to the hub cache folder
 #os.environ["HUGGINGFACE_HUB_CACHE"] = r"D:\hf_cache\hub"
