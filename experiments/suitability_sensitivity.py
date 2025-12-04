@@ -73,7 +73,7 @@ def build_suitability_engine() -> ctrl.ControlSystemSimulation:
     availability = ctrl.Antecedent(np.arange(0, 101, 1), "availability")
     skill_match = ctrl.Antecedent(np.arange(0, 101, 1), "skill_match")
     experience = ctrl.Antecedent(np.arange(0, 5, 1), "experience")
-    workload = ctrl.Antecedent(np.arange(0, 11, 1), "workload")
+    workload = ctrl.Antecedent(np.arange(0, 10.1, 0.1), "workload")
     task_priority = ctrl.Antecedent(np.arange(0, 3, 1), "task_priority")
     task_complexity = ctrl.Antecedent(np.arange(1, 11, 1), "task_complexity")
     nts_avg = ctrl.Antecedent(np.arange(1, 5.1, 0.1), "nts_avg")

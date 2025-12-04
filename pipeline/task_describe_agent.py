@@ -6,7 +6,7 @@ os.environ["HUGGINGFACE_HUB_CACHE"] = r"~/luudh/MyFile/vr_lab/hf_cache/hub"
 
 from huggingface_hub import login
 
-login(token = ' your_hugging_face_token')
+login(token = ' your_hf_token_here ')
 base_model = "meta-llama/Llama-3.1-8B-Instruct"
 fine_tuned_model = "/home/luudh/luudh/MyFile/AI_Scheduling/Llama-3.1-8B-Instruct-finetuned-version2"
 #fine_tuned_model = "luudh/AI-Schedule-Manager-Llama-3.1-8B-v2"

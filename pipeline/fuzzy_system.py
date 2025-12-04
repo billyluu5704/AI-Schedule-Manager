@@ -4,7 +4,7 @@ from skfuzzy import control as ctrl
 import time
 import json
 from huggingface_hub import login
-login(token = 'your_hugging_face_token')
+login(token = 'your_hf_token_here')
 from pipeline.task_describe_agent import generate
 #from availability_check_agent import generate_score
 from pipeline.fuzzy_logic_for_availability_check import fuzzy_availability
@@ -123,7 +123,7 @@ def fuzzy_system(user_input, staff):
     availability = ctrl.Antecedent(np.arange(0, 101, 1), 'availability')
     skill_match = ctrl.Antecedent(np.arange(0, 101, 1), 'skill_match')
     experience = ctrl.Antecedent(np.arange(0, 5, 1), 'experience') #fix: depending on your staff's experience on each skill
-    workload = ctrl.Antecedent(np.arange(0, 11, 1), 'workload') #number of tasks
+    workload = ctrl.Antecedent(np.arange(0, 10.1, 0.1), 'workload') #number of tasks
     task_priority = ctrl.Antecedent(np.arange(0, 3, 1), 'task_priority') #1-3 scale
     task_complexity = ctrl.Antecedent(np.arange(1, 11, 1), 'task_complexity')
     nts_avg = ctrl.Antecedent(np.arange(1, 5.1, 0.1), 'nts_avg')
